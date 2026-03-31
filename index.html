@@ -1,1 +1,206 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZBAIR YOUNESS - Full Stack Developer</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --font: 'Segoe UI', system-ui, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font); color: var(--dark); background: var(--light); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Navigation */
+        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 100; }
+        nav .logo { font-weight: bold; font-size: 1.5rem; color: var(--primary); }
+        nav ul { list-style: none; display: flex; gap: 1.5rem; align-items: center; }
+        nav a:hover { color: var(--primary); }
+
+        /* Sections */
+        section { padding: 5rem 5%; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; color: var(--dark); }
+        
+        /* Hero */
+        .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #f0fdfa, #e0f2fe); }
+        .hero h1 { font-size: 4rem; margin-bottom: 1rem; }
+        .hero h2 { font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem; }
+        .hero p { max-width: 800px; font-size: 1.2rem; color: var(--gray); margin-bottom: 2rem; }
+        
+        /* Grid Layouts */
+        .grid { display: grid; gap: 2rem; }
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+        /* Cards */
+        .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); }
+        .card h3 { margin-bottom: 1rem; color: var(--primary); }
+        .card ul { list-style-position: inside; color: var(--gray); }
+        .card li { margin-bottom: 0.5rem; }
+
+        /* Tags for Skills */
+        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: #e2e8f0; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+
+        /* Footer */
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
+        footer a { color: #38bdf8; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">YZ.</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="hero">
+        [span_0](start_span)<h1>ZBAIR YOUNESS[span_0](end_span)</h1>
+        [span_1](start_span)<h2>FULL STACK DEVELOPER[span_1](end_span)</h2>
+        <p>A passionate Full Stack developer, I have in-depth expertise in the Laravel ecosystem. With solid experience in the design and implementation of complete web solutions, from database creation to user interface management. Skilled in frontend development with Vue.js and experienced in creating robust APIs, I am committed to producing efficient, scalable and performance-driven applications. [span_2](start_span)I have excellent collaboration skills within multidisciplinary teams to achieve the project objectives.[span_2](end_span)</p>
+        <div class="tags" style="justify-content: center;">
+            [span_3](start_span)<span class="tag">📍 Ksar el kebir, Morocco[span_3](end_span)</span>
+            [span_4](start_span)<span class="tag">✉️ youness@zbair.net[span_4](end_span)</span>
+            [span_5](start_span)<span class="tag">📞 +2126 22 66 85 17[span_5](end_span)</span>
+            [span_6](start_span)<span class="tag">🔗 <a href="http://www.zbair.net">www.zbair.net</a>[span_6](end_span)</span>
+            [span_7](start_span)<span class="tag">💻 <a href="https://github.com/youness52">github.com/youness52</a>[span_7](end_span)</span>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>Web Technologies</h3>
+                <div class="tags">
+                    <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span>
+                    <span class="tag">VueJS</span><span class="tag">WordPress</span><span class="tag">PHP</span><span class="tag">Laravel</span>
+                    <span class="tag">Django</span><span class="tag">ASP.NET</span><span class="tag">Json</span><span class="tag">jQueryj</span>
+                    [span_8](start_span)<span class="tag">NodeJS</span><span class="tag">Next</span><span class="tag">Nuxt</span><span class="tag">React</span><span class="tag">Angular 17</span>[span_8](end_span)
+                </div>
+            </div>
+            <div class="card">
+                <h3>Mobile & Desktop</h3>
+                <div class="tags">
+                    [span_9](start_span)<span class="tag">Android studio</span><span class="tag">Flutter</span><span class="tag">Capacitor.JS</span><span class="tag">React native</span>[span_9](end_span)
+                    <span class="tag">JAVA</span><span class="tag">C#.NET</span><span class="tag">VB.NET</span><span class="tag">C++</span>
+                    [span_10](start_span)<span class="tag">visual studio</span><span class="tag">crystal reports</span><span class="tag">Eclipse</span>[span_10](end_span)
+                </div>
+            </div>
+            <div class="card">
+                <h3>Databases</h3>
+                <div class="tags">
+                    <span class="tag">MySQL</span><span class="tag">Oracle</span><span class="tag">SQL Server</span>
+                    [span_11](start_span)<span class="tag">pgSQL</span><span class="tag">mongo db</span><span class="tag">Firebase</span>[span_11](end_span)
+                </div>
+            </div>
+            <div class="card">
+                <h3>Certifications</h3>
+                <ul>
+                    [span_12](start_span)<li>Udacity: Full stack developer Track, Data analysis Track[span_12](end_span)</li>
+                    [span_13](start_span)<li>Cisco: Cybersecurity.[span_13](end_span) [span_14](start_span)Linux command.[span_14](end_span)</li>
+                    [span_15](start_span)<li>Google: Digital marketing.[span_15](end_span)</li>
+                    [span_16](start_span)<li>Udemy: Web design & development, Agile scrum Master, Amazon web services (AWS)[span_16](end_span)</li>
+                    [span_17](start_span)<li>Oracle: Oracle Cloud Infrastructure 2023 Al[span_17](end_span)</li>
+                    [span_18](start_span)<li>EF SET: B2 English certificate.[span_18](end_span)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="background: white;">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>MIAGE School Mobile Application</h3>
+                <p>Developed a comprehensive mobile application using Expo and React Native for the MIAGE school in Ksar El Kébir.</p>
+            </div>
+            <div class="card">
+                <h3>Restaurant Sindibad Platform</h3>
+                <p>Designed and built a multi-page website for a fast food restaurant, integrating local business info and dynamic content mapping.</p>
+            </div>
+            <div class="card">
+                <h3>School Scheduling System</h3>
+                <p>Architected a complex front-end drag-and-drop scheduling interface tailored for managing timetables across multiple specific classrooms.</p>
+            </div>
+            <div class="card">
+                <h3>AI Food Scanner</h3>
+                <p>Engineered a React Native application featuring a dedicated scan system that analyzes food images using artificial intelligence.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>Full Stack Developer</h3>
+                <p><strong>GRETIN: Industrial Studies Group | [span_19](start_span)Tangier, Morocco[span_19](end_span)[span_20](start_span)</strong> (Jul 2022-Oct 2022)[span_20](end_span)</p>
+                <ul>
+                    [span_21](start_span)<li>Designing and developing server-side and client-side features.[span_21](end_span)</li>
+                    [span_22](start_span)<li>Creating and maintaining databases.[span_22](end_span)</li>
+                    [span_23](start_span)<li>Setting up backend architecture with Laravel, developing APIs for seamless communication.[span_23](end_span)</li>
+                    [span_24](start_span)<li>Managing frontend aspects using frameworks like Vue.js.[span_24](end_span)</li>
+                    [span_25](start_span)<li>Collaborating with multidisciplinary teams to achieve project objectives.[span_25](end_span)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>IT Teacher</h3>
+                <p><strong>MIAGE Group | [span_26](start_span)MIAGE Ksar le Kebir, Morocco[span_26](end_span)[span_27](start_span)</strong> (2020-Present)[span_27](end_span)</p>
+                <ul>
+                    [span_28](start_span)<li>Conducting lectures on IT concepts and technologies.[span_28](end_span)</li>
+                    [span_29](start_span)<li>Designing and facilitating practical exercises and projects.[span_29](end_span)</li>
+                    [span_30](start_span)<li>Providing assistance and troubleshooting for IT-related problems.[span_30](end_span)</li>
+                    [span_31](start_span)<li>Assessing student performance through tests, projects, and assignments.[span_31](end_span)</li>
+                    [span_32](start_span)<li>Promoting collaboration among students through group projects and discussions.[span_32](end_span)</li>
+                    [span_33](start_span)<li>Staying updated on the latest developments in IT to ensure the curriculum remains relevant.[span_33](end_span)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>IT & Team Leader</h3>
+                [span_34](start_span)<p><strong>Email marketing ksar el kebir, Morocco[span_34](end_span)[span_35](start_span)</strong> (2019-2021)[span_35](end_span)</p>
+                <ul>
+                    [span_36](start_span)<li>Configuration and maintenance of mail servers.[span_36](end_span)</li>
+                    [span_37](start_span)<li>Development and maintenance of email marketing applications.[span_37](end_span)</li>
+                    [span_38](start_span)<li>Customer data management.[span_38](end_span)</li>
+                    [span_39](start_span)<li>IT security.[span_39](end_span)</li>
+                    [span_40](start_span)<li>Integration with other systems.[span_40](end_span)</li>
+                    [span_41](start_span)<li>Support technique[span_41](end_span)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" style="background: white;">
+        <h2 class="section-title">Education</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>Master in IT engineer, Security & Decision</h3>
+                [span_42](start_span)<p>ENSA Tangier Morocco 2023-2025[span_42](end_span)</p>
+            </div>
+            <div class="card">
+                <h3>European Bachelor's WEBMASTER</h3>
+                [span_43](start_span)<p>FEDEration for European Education 2021-2022[span_43](end_span)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ZBAIR YOUNESS. All rights reserved.</p>
+        <p>Connect on <a href="https://github.com/youness52">GitHub</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth" dir="ltr">
 <head>
     <meta charset="UTF-8">
@@ -15,18 +15,18 @@
     
     <!-- Canonical Link -->
     <link rel="canonical" href="https://zbair.net/">
-<!-- Favicon -->
-<link
-  rel="icon"
-  type="image/png"
-  href="https://avatars.githubusercontent.com/u/38602794?v=4"
-/>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://avatars.githubusercontent.com/u/38602794?v=4"
+    />
 
-<!-- Optional for Apple devices -->
-<link
-  rel="apple-touch-icon"
-  href="https://avatars.githubusercontent.com/u/38602794?v=4"
-/>
+    <!-- Optional for Apple devices -->
+    <link
+      rel="apple-touch-icon"
+      href="https://avatars.githubusercontent.com/u/38602794?v=4"
+    />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zbair.net/">
@@ -40,32 +40,6 @@
     <meta property="twitter:title" content="ZBAIR YOUNESS | Senior Full Stack Engineer">
     <meta property="twitter:description" content="Portfolio of Zbair Youness, Senior Full Stack Engineer based in Morocco. Expert in Laravel, React Native, Node.js, and scalable system architecture.">
     <meta property="twitter:image" content="https://zbair.net/gallery_gen/5c92afa9f73a229fb01284027093fce7_fit.jpg?ts=1750241213">
-
-    <!-- Schema.org JSON-LD for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Zbair Youness",
-      "jobTitle": "Senior Full Stack Engineer",
-      "url": "https://zbair.net",
-      "image": "https://images2.imgbox.com/1b/71/DwjB2W4k_o.png",
-      "description": "Senior Full Stack Engineer with deep expertise in the Laravel ecosystem, mobile development with React Native, and robust API architectures.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Ksar el Kebir",
-        "addressCountry": "Morocco"
-      },
-      "email": "youness@zbair.net",
-      "sameAs": [
-        "https://github.com/youness52"
-      ],
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "ENSA Tangier"
-      }
-    }
-    </script>
 
     <!-- Performance Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,7 +71,7 @@
         }
     </script>
 
-    <!-- Custom CSS for elements Tailwind can't handle perfectly out of the box -->
+    <!-- Custom CSS -->
     <style>
         body {
             background-color: #050505;
@@ -123,6 +97,12 @@
         ::-webkit-scrollbar-track { background: #050505; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 5px; }
         ::-webkit-scrollbar-thumb:hover { background: #10b981; }
+
+        .lang-active {
+            background: white;
+            color: black;
+            border-color: white;
+        }
     </style>
 
     <!-- Lucide Icons -->
@@ -130,7 +110,7 @@
 </head>
 <body class="antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
 
-    <!-- Background Elements (Hidden from screen readers) -->
+    <!-- Background Elements -->
     <div class="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
         <div class="absolute inset-0 bg-[#050505]"></div>
         <div class="absolute inset-0 bg-grid"></div>
@@ -145,15 +125,25 @@
                 <a href="#" class="text-xl font-bold tracking-tighter text-white hover:opacity-80 transition-opacity" aria-label="Go to top">
                     ZY<span class="text-emerald-500">.</span>
                 </a>
+                
                 <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-400">
-                    <a href="#about" class="hover:text-white transition-colors">About</a>
-                    <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
-                    <a href="#projects" class="hover:text-white transition-colors">Projects</a>
-                    <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                    <a href="#about" data-i18n="nav_about" class="hover:text-white transition-colors">About</a>
+                    <a href="#expertise" data-i18n="nav_expertise" class="hover:text-white transition-colors">Expertise</a>
+                    <a href="#projects" data-i18n="nav_projects" class="hover:text-white transition-colors">Projects</a>
+                    <a href="#experience" data-i18n="nav_experience" class="hover:text-white transition-colors">Experience</a>
                 </div>
-                <a href="#contact" class="px-5 py-2 text-sm font-medium bg-white text-black rounded-full hover:bg-neutral-200 transition-colors">
-                    Get in touch
-                </a>
+
+                <div class="flex items-center gap-4">
+                    <!-- Language Switcher -->
+                    <div class="hidden sm:flex items-center gap-2">
+                        <button onclick="setLanguage('en')" data-lang="en" class="lang-btn border border-neutral-700 px-2 py-1 rounded text-xs font-mono hover:bg-neutral-800 transition">EN</button>
+                        <button onclick="setLanguage('fr')" data-lang="fr" class="lang-btn border border-neutral-700 px-2 py-1 rounded text-xs font-mono hover:bg-neutral-800 transition">FR</button>
+                    </div>
+
+                    <a href="#contact" data-i18n="nav_contact" class="px-5 py-2 text-sm font-medium bg-white text-black rounded-full hover:bg-neutral-200 transition-colors">
+                        Get in touch
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -167,23 +157,23 @@
                 <div class="lg:col-span-7 flex flex-col items-start">
                     <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-emerald-400 text-xs font-mono mb-8">
                         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
-                        Available for Senior Roles
+                        <span data-i18n="hero_available">Available for Senior Roles</span>
                     </div>
                     
                     <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-6">
-                        Architecting <br class="hidden sm:block"/>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
+                        <span data-i18n="hero_title_1">Architecting</span> <br class="hidden sm:block"/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500" data-i18n="hero_title_2">
                             scalable systems.
                         </span>
                     </h1>
                     
-                    <p class="text-lg text-neutral-400 leading-relaxed mb-10 max-w-xl">
+                    <p class="text-lg text-neutral-400 leading-relaxed mb-10 max-w-xl" data-i18n="hero_desc">
                         Passionate Full Stack Engineer with deep expertise in the Laravel ecosystem, mobile development (React Native), and robust API architectures. Proven track record in designing, scaling, and optimizing complete web and mobile solutions.
                     </p>
                     
                     <div class="flex flex-wrap items-center gap-4">
                         <a href="#projects" class="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-neutral-200 transition-colors">
-                            Projects <i data-lucide="chevron-right" class="w-4 h-4" aria-hidden="true"></i>
+                            <span data-i18n="hero_btn_projects">Projects</span> <i data-lucide="chevron-right" class="w-4 h-4" aria-hidden="true"></i>
                         </a>
                         <a href="https://github.com/youness52" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white border border-neutral-800 rounded-lg font-medium hover:bg-neutral-800 hover:border-neutral-700 transition-all">
                             <i data-lucide="github" class="w-[18px] h-[18px]" aria-hidden="true"></i> GitHub
@@ -191,44 +181,39 @@
                     </div>
                 </div>
 
-                <!-- Right Image Grid / Bento -->
+                <!-- Right Image Grid -->
                 <div class="lg:col-span-5 w-full relative">
                     <div class="aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden relative group border border-neutral-800 bg-neutral-900/50">
                         <img 
                             src="https://images2.imgbox.com/1b/71/DwjB2W4k_o.png" 
-                            alt="Zbair Youness - Senior Full Stack Engineer Portrait" 
+                            alt="Zbair Youness" 
                             class="w-full h-full object-cover object-top grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
-                            width="500"
-                            height="600"
                         />
-                        <!-- Overlay Gradient -->
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" aria-hidden="true"></div>
                         
-                        <!-- Floating Info inside Image -->
                         <div class="absolute bottom-6 left-6 right-6">
                             <div class="flex items-center gap-3 mb-2">
                                 <i data-lucide="map-pin" class="text-emerald-400 w-[18px] h-[18px]" aria-hidden="true"></i>
-                                <span class="text-white font-medium text-sm">Ksar el Kebir, Morocco</span>
+                                <span class="text-white font-medium text-sm" data-i18n="hero_location">Ksar el Kebir, Morocco</span>
                             </div>
                             <h2 class="text-2xl font-bold text-white m-0">ZBAIR YOUNESS</h2>
-                            <p class="text-neutral-400 font-mono text-sm mt-1">Senior Full Stack Engineer</p>
+                            <p class="text-neutral-400 font-mono text-sm mt-1" data-i18n="hero_role">Senior Full Stack Engineer</p>
                         </div>
                     </div>
                     
-                    <!-- Decorative element -->
                     <div class="absolute -right-6 top-10 p-4 bg-neutral-900 border border-neutral-800 rounded-2xl hidden md:flex flex-col gap-2 shadow-2xl items-center" aria-hidden="true">
                         <i data-lucide="code-2" class="text-emerald-400 w-6 h-6"></i>
-                        <span class="text-[10px] font-mono text-neutral-400 uppercase tracking-wider">Clean Code</span>
+                        <span class="text-[10px] font-mono text-neutral-400 uppercase tracking-wider" data-i18n="hero_badge">Clean Code</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Arsenal (Skills) -->
+        <!-- Technical Arsenal -->
         <section id="expertise" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900" aria-labelledby="expertise-heading">
             <div class="mb-16">
-                <h2 id="expertise-heading" class="text-3xl font-bold text-white mb-4">Technical Arsenal</h2>
-                <p class="text-neutral-400 max-w-2xl">Comprehensive expertise across the entire stack, specializing in building resilient applications from robust databases to scalable cross-platform mobile interfaces.</p>
+                <h2 id="expertise-heading" class="text-3xl font-bold text-white mb-4" data-i18n="exp_title">Technical Arsenal</h2>
+                <p class="text-neutral-400 max-w-2xl" data-i18n="exp_desc">Comprehensive expertise across the entire stack, specializing in building resilient applications from robust databases to scalable cross-platform mobile interfaces.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -238,7 +223,7 @@
                         <div class="p-3 bg-neutral-800 rounded-xl group-hover:bg-emerald-500/10 group-hover:text-emerald-400 transition-colors">
                             <i data-lucide="terminal" class="text-neutral-400 group-hover:text-emerald-400 w-6 h-6 transition-colors" aria-hidden="true"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-white">Core Ecosystem</h3>
+                        <h3 class="text-xl font-semibold text-white" data-i18n="exp_core">Core Ecosystem</h3>
                     </div>
                     <ul class="flex flex-wrap gap-2">
                         <li class="px-4 py-2 bg-neutral-950 border border-neutral-800 rounded-lg text-sm text-neutral-300 font-medium">Laravel</li>
@@ -257,7 +242,7 @@
                         <div class="p-3 bg-neutral-800 rounded-xl group-hover:bg-blue-500/10 group-hover:text-blue-400 transition-colors">
                             <i data-lucide="layout" class="text-neutral-400 group-hover:text-blue-400 w-6 h-6 transition-colors" aria-hidden="true"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-white">Frontend</h3>
+                        <h3 class="text-xl font-semibold text-white" data-i18n="exp_front">Frontend</h3>
                     </div>
                     <ul class="flex flex-wrap gap-2">
                         <li class="px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-md text-xs text-neutral-400">Next.js</li>
@@ -273,7 +258,7 @@
                         <div class="p-3 bg-neutral-800 rounded-xl group-hover:bg-cyan-500/10 group-hover:text-cyan-400 transition-colors">
                             <i data-lucide="smartphone" class="text-neutral-400 group-hover:text-cyan-400 w-6 h-6 transition-colors" aria-hidden="true"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-white">Mobile</h3>
+                        <h3 class="text-xl font-semibold text-white" data-i18n="exp_mobile">Mobile</h3>
                     </div>
                     <ul class="flex flex-wrap gap-2">
                         <li class="px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-md text-xs text-neutral-400">React Native</li>
@@ -289,7 +274,7 @@
                         <div class="p-3 bg-neutral-800 rounded-xl group-hover:bg-purple-500/10 group-hover:text-purple-400 transition-colors">
                             <i data-lucide="server" class="text-neutral-400 group-hover:text-purple-400 w-6 h-6 transition-colors" aria-hidden="true"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-white">Backend & Database</h3>
+                        <h3 class="text-xl font-semibold text-white" data-i18n="exp_back">Backend & Database</h3>
                     </div>
                     <ul class="flex flex-wrap gap-2">
                         <li class="px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-md text-xs text-neutral-400">MySQL / PostgreSQL</li>
@@ -307,8 +292,8 @@
         <!-- Featured Projects -->
         <section id="projects" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900" aria-labelledby="projects-heading">
             <div class="mb-16">
-                <h2 id="projects-heading" class="text-3xl font-bold text-white mb-4">Featured Projects</h2>
-                <p class="text-neutral-400 max-w-2xl">A curated selection of modern applications, custom architectures, and mobile solutions I have engineered recently.</p>
+                <h2 id="projects-heading" class="text-3xl font-bold text-white mb-4" data-i18n="proj_title">Featured Projects</h2>
+                <p class="text-neutral-400 max-w-2xl" data-i18n="proj_desc">A curated selection of modern applications, custom architectures, and mobile solutions I have engineered recently.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -319,11 +304,11 @@
                         <i data-lucide="activity" class="w-40 h-40 text-emerald-500"></i>
                     </div>
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6" data-i18n="tag_mobile">
                             Mobile App
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-3 relative z-10">FitTrack</h3>
-                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm">
+                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm" data-i18n="proj_fit_desc">
                             A comprehensive fitness application designed to be your ultimate workout companion. Features include customized workout creation (sets, reps, duration), discovering new pre-built routines, and maintaining a detailed history of your progress with an interactive workout player.
                         </p>
                     </div>
@@ -342,11 +327,11 @@
                         <i data-lucide="pie-chart" class="w-40 h-40 text-rose-500"></i>
                     </div>
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6" data-i18n="tag_live_mobile">
                             Live Mobile App
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Calories Tracker</h3>
-                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm">
+                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10" data-i18n="proj_cal_title">Calories Tracker</h3>
+                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm" data-i18n="proj_cal_desc">
                             Built with React Native to make nutrition tracking simple and intuitive. Features a clean interface for daily calorie and macro monitoring, a comprehensive food database, custom recipe entries, and weekly progress overviews.
                         </p>
                     </div>
@@ -358,7 +343,7 @@
                         </ul>
                         <div class="flex items-center gap-5 relative z-10">
                             <a href="https://play.google.com/store/apps/details?id=com.younessz.calorietracker" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-emerald-400 transition-colors">
-                                <i data-lucide="external-link" class="w-4 h-4" aria-hidden="true"></i> View on Play Store
+                                <i data-lucide="external-link" class="w-4 h-4" aria-hidden="true"></i> <span data-i18n="btn_playstore">View on Play Store</span>
                             </a>
                         </div>
                     </div>
@@ -370,11 +355,11 @@
                         <i data-lucide="calendar-check" class="w-40 h-40 text-blue-500"></i>
                     </div>
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6" data-i18n="tag_ent_web">
                             Enterprise Web App
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Meeting Room Reservation</h3>
-                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm">
+                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10" data-i18n="proj_meet_title">Meeting Room Reservation</h3>
+                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm" data-i18n="proj_meet_desc">
                             A robust web-based system designed for managing corporate meeting spaces. Includes dynamic forms for booking, detailed analytics dashboards, and complex user role and permission management.
                         </p>
                     </div>
@@ -393,11 +378,11 @@
                         <i data-lucide="shopping-cart" class="w-40 h-40 text-purple-500"></i>
                     </div>
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6" data-i18n="tag_desktop_mob">
                             Desktop / Mobile
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Point of Sale (POS)</h3>
-                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm">
+                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10" data-i18n="proj_pos_title">Point of Sale (POS)</h3>
+                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm" data-i18n="proj_pos_desc">
                             A complete Point of Sale mobile and desktop solution. Architected to handle real-time mobile order entry, main register operations, and robust operational settings directly connected to the central database.
                         </p>
                     </div>
@@ -416,11 +401,11 @@
                         <i data-lucide="headphones" class="w-40 h-40 text-cyan-400"></i>
                     </div>
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6" data-i18n="tag_mobile">
                             Mobile App
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Calm MixFlow</h3>
-                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm">
+                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm" data-i18n="proj_calm_desc">
                             An ambient sound mixer designed for focus and relaxation. Users can seamlessly blend multiple audio tracks, such as lofi beats, ocean waves, and nature sounds, adjusting individual volume levels to create their perfect environment.
                         </p>
                     </div>
@@ -438,11 +423,11 @@
                         <i data-lucide="moon" class="w-40 h-40 text-indigo-400"></i>
                     </div>
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono mb-6" data-i18n="tag_mobile">
                             Mobile App
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Sleep Tracker & Water Reminder</h3>
-                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm">
+                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10" data-i18n="proj_sleep_title">Sleep Tracker & Water Reminder</h3>
+                        <p class="text-neutral-400 mb-6 relative z-10 leading-relaxed text-sm" data-i18n="proj_sleep_desc">
                             A suite of health utility applications built to monitor daily wellness metrics. Includes accurate sleep cycle monitoring with bedtime reminders, alongside daily hydration tracking algorithms.
                         </p>
                     </div>
@@ -460,8 +445,8 @@
         <!-- Engineering Experience -->
         <section id="experience" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900" aria-labelledby="experience-heading">
             <div class="mb-16">
-                <h2 id="experience-heading" class="text-3xl font-bold text-white mb-4">Professional Experience</h2>
-                <p class="text-neutral-400">A timeline of professional roles, highlighting development, leadership, and teaching contributions.</p>
+                <h2 id="experience-heading" class="text-3xl font-bold text-white mb-4" data-i18n="work_title">Professional Experience</h2>
+                <p class="text-neutral-400" data-i18n="work_desc">A timeline of professional roles, highlighting development, leadership, and teaching contributions.</p>
             </div>
 
             <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-neutral-800 before:to-transparent">
@@ -474,19 +459,19 @@
                     <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 ml-auto md:ml-0 md:mr-auto">
                         <div class="flex flex-col xl:flex-row xl:justify-between xl:items-start mb-4 gap-2">
                             <div>
-                                <h3 class="font-bold text-xl text-white">IT Teacher</h3>
+                                <h3 class="font-bold text-xl text-white" data-i18n="job1_title">IT Teacher</h3>
                                 <div class="text-emerald-400 font-medium mt-1">MIAGE Ksar El Kébir</div>
                             </div>
-                            <time class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono whitespace-nowrap h-fit">
+                            <time class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono whitespace-nowrap h-fit" data-i18n="job1_date">
                                 Feb 2020 - Present
                             </time>
                         </div>
                         <ul class="space-y-3 mt-4">
                             <li class="flex items-start text-neutral-400 text-sm leading-relaxed">
-                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> Delivered comprehensive curriculum on advanced IT concepts and modern programming technologies.
+                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> <span data-i18n="job1_task1">Delivered comprehensive curriculum on advanced IT concepts and modern programming technologies.</span>
                             </li>
                             <li class="flex items-start text-neutral-400 text-sm leading-relaxed">
-                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> Mentored students through complex projects, focusing on best practices and clean code logic.
+                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> <span data-i18n="job1_task2">Mentored students through complex projects, focusing on best practices and clean code logic.</span>
                             </li>
                         </ul>
                     </div>
@@ -500,19 +485,19 @@
                     <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 ml-auto md:ml-auto md:mr-0">
                         <div class="flex flex-col xl:flex-row xl:justify-between xl:items-start mb-4 gap-2">
                             <div>
-                                <h3 class="font-bold text-xl text-white">Full Stack Developer</h3>
-                                <div class="text-emerald-400 font-medium mt-1">Dahbi Group (Remote)</div>
+                                <h3 class="font-bold text-xl text-white" data-i18n="job2_title">Full Stack Developer</h3>
+                                <div class="text-emerald-400 font-medium mt-1" data-i18n="job2_company">Dahbi Group (Remote)</div>
                             </div>
-                            <time class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono whitespace-nowrap h-fit">
+                            <time class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono whitespace-nowrap h-fit" data-i18n="job2_date">
                                 Jul 2024 - Jun 2025
                             </time>
                         </div>
                         <ul class="space-y-3 mt-4">
                             <li class="flex items-start text-neutral-400 text-sm leading-relaxed">
-                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> Freelance Full Stack engineer architecting and delivering complete web solutions remotely.
+                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> <span data-i18n="job2_task1">Freelance Full Stack engineer architecting and delivering complete web solutions remotely.</span>
                             </li>
                             <li class="flex items-start text-neutral-400 text-sm leading-relaxed">
-                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> Optimized database structures and scaled API endpoints for rapid data retrieval.
+                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> <span data-i18n="job2_task2">Optimized database structures and scaled API endpoints for rapid data retrieval.</span>
                             </li>
                         </ul>
                     </div>
@@ -526,19 +511,19 @@
                     <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 ml-auto md:ml-0 md:mr-auto">
                         <div class="flex flex-col xl:flex-row xl:justify-between xl:items-start mb-4 gap-2">
                             <div>
-                                <h3 class="font-bold text-xl text-white">Full-stack Developer</h3>
+                                <h3 class="font-bold text-xl text-white" data-i18n="job3_title">Full-stack Developer</h3>
                                 <div class="text-emerald-400 font-medium mt-1">Gretin: Groupe des Études Industrielles</div>
                             </div>
-                            <time class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono whitespace-nowrap h-fit">
+                            <time class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono whitespace-nowrap h-fit" data-i18n="job3_date">
                                 Jul 2022 - Sep 2022
                             </time>
                         </div>
                         <ul class="space-y-3 mt-4">
                             <li class="flex items-start text-neutral-400 text-sm leading-relaxed">
-                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> Engineered scalable backend architectures primarily utilizing Laravel and JavaScript.
+                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> <span data-i18n="job3_task1">Engineered scalable backend architectures primarily utilizing Laravel and JavaScript.</span>
                             </li>
                             <li class="flex items-start text-neutral-400 text-sm leading-relaxed">
-                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> Collaborated with multidisciplinary industrial teams to accelerate technical delivery.
+                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> <span data-i18n="job3_task2">Collaborated with multidisciplinary industrial teams to accelerate technical delivery.</span>
                             </li>
                         </ul>
                     </div>
@@ -552,19 +537,19 @@
                     <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 ml-auto md:ml-auto md:mr-0">
                         <div class="flex flex-col xl:flex-row xl:justify-between xl:items-start mb-4 gap-2">
                             <div>
-                                <h3 class="font-bold text-xl text-white">IT & Team Leader</h3>
+                                <h3 class="font-bold text-xl text-white" data-i18n="job4_title">IT & Team Leader</h3>
                                 <div class="text-emerald-400 font-medium mt-1">Email Marketing</div>
                             </div>
-                            <time class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono whitespace-nowrap h-fit">
+                            <time class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono whitespace-nowrap h-fit" data-i18n="job4_date">
                                 Oct 2019 - Oct 2021
                             </time>
                         </div>
                         <ul class="space-y-3 mt-4">
                             <li class="flex items-start text-neutral-400 text-sm leading-relaxed">
-                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> Configured and actively maintained secure, high-volume mail servers.
+                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> <span data-i18n="job4_task1">Configured and actively maintained secure, high-volume mail servers.</span>
                             </li>
                             <li class="flex items-start text-neutral-400 text-sm leading-relaxed">
-                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> Led the development team in creating enterprise email marketing applications, focusing on REST APIs and Cyber-security.
+                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> <span data-i18n="job4_task2">Led the development team in creating enterprise email marketing applications, focusing on REST APIs and Cyber-security.</span>
                             </li>
                         </ul>
                     </div>
@@ -578,16 +563,16 @@
                     <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 ml-auto md:ml-0 md:mr-auto">
                         <div class="flex flex-col xl:flex-row xl:justify-between xl:items-start mb-4 gap-2">
                             <div>
-                                <h3 class="font-bold text-xl text-white">Freelance Developer</h3>
+                                <h3 class="font-bold text-xl text-white" data-i18n="job5_title">Freelance Developer</h3>
                                 <div class="text-emerald-400 font-medium mt-1">Fiverr and Upwork</div>
                             </div>
-                            <time class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono whitespace-nowrap h-fit">
+                            <time class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-mono whitespace-nowrap h-fit" data-i18n="job5_date">
                                 Aug 2015 - Jul 2018
                             </time>
                         </div>
                         <ul class="space-y-3 mt-4">
                             <li class="flex items-start text-neutral-400 text-sm leading-relaxed">
-                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> Delivered custom web solutions for international clients using Laravel and WordPress.
+                                <span class="text-neutral-600 mr-2 mt-0.5" aria-hidden="true">▹</span> <span data-i18n="job5_task1">Delivered custom web solutions for international clients using Laravel and WordPress.</span>
                             </li>
                         </ul>
                     </div>
@@ -603,20 +588,20 @@
                 <div>
                     <div class="flex items-center gap-3 mb-8">
                         <i data-lucide="graduation-cap" class="text-emerald-500 w-7 h-7" aria-hidden="true"></i>
-                        <h2 id="academic-heading" class="text-2xl font-bold text-white">Academic Background</h2>
+                        <h2 id="academic-heading" class="text-2xl font-bold text-white" data-i18n="edu_title">Academic Background</h2>
                     </div>
                     <div class="space-y-6">
                         <article class="p-6 bg-neutral-900/30 border border-neutral-800 rounded-2xl hover:bg-neutral-900/60 transition-colors">
-                            <div class="text-xs font-mono text-emerald-400 mb-2">Nov 2023 - Aug 2025</div>
-                            <h3 class="text-lg font-bold text-white mb-1">Master's degree, Computer Engineering, Security and Decision</h3>
+                            <div class="text-xs font-mono text-emerald-400 mb-2" data-i18n="edu1_date">Nov 2023 - Aug 2025</div>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="edu1_degree">Master's degree, Computer Engineering, Security and Decision</h3>
                             <p class="text-neutral-400 mb-2">ENSA TANGER</p>
-                            <p class="text-xs text-neutral-500 font-mono">Skills: Java, PHP, Artificial Intelligence, Big Data</p>
+                            <p class="text-xs text-neutral-500 font-mono" data-i18n="edu1_skills">Skills: Java, PHP, Artificial Intelligence, Big Data</p>
                         </article>
                         <article class="p-6 bg-neutral-900/30 border border-neutral-800 rounded-2xl hover:bg-neutral-900/60 transition-colors">
-                            <div class="text-xs font-mono text-emerald-400 mb-2">Sep 2021 - Oct 2022</div>
-                            <h3 class="text-lg font-bold text-white mb-1">Bachelor's degree, Web/Multimedia Management & Webmaster</h3>
-                            <p class="text-neutral-400 mb-2">Federation for European Education</p>
-                            <p class="text-xs text-neutral-500 font-mono">Skills: PHP, Laravel, Modern JS Frameworks</p>
+                            <div class="text-xs font-mono text-emerald-400 mb-2" data-i18n="edu2_date">Sep 2021 - Oct 2022</div>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="edu2_degree">Bachelor's degree, Web/Multimedia Management & Webmaster</h3>
+                            <p class="text-neutral-400 mb-2" data-i18n="edu2_school">Federation for European Education</p>
+                            <p class="text-xs text-neutral-500 font-mono" data-i18n="edu2_skills">Skills: PHP, Laravel, Modern JS Frameworks</p>
                         </article>
                     </div>
                 </div>
@@ -625,7 +610,7 @@
                 <div>
                     <div class="flex items-center gap-3 mb-8">
                         <i data-lucide="award" class="text-emerald-500 w-7 h-7" aria-hidden="true"></i>
-                        <h2 class="text-2xl font-bold text-white">Licenses & Certifications</h2>
+                        <h2 class="text-2xl font-bold text-white" data-i18n="cert_title">Licenses & Certifications</h2>
                     </div>
                     <div class="p-8 bg-neutral-900/30 border border-neutral-800 rounded-2xl h-[calc(100%-4rem)]">
                         <ul class="space-y-4">
@@ -633,27 +618,27 @@
                                 <div class="w-1.5 h-1.5 rounded-full bg-neutral-700 mt-2 mr-4 group-hover:bg-emerald-500 transition-colors shrink-0" aria-hidden="true"></div>
                                 <div>
                                     <span class="text-neutral-200 group-hover:text-white transition-colors font-medium block">Oracle Cloud Infrastructure 2023 AI Foundations Associate</span>
-                                    <span class="text-neutral-500 text-xs">Oracle • Jan 2024</span>
+                                    <span class="text-neutral-500 text-xs">Oracle • <span data-i18n="date_jan2024">Jan 2024</span></span>
                                 </div>
                             </li>
                             <li class="flex items-start group">
                                 <div class="w-1.5 h-1.5 rounded-full bg-neutral-700 mt-2 mr-4 group-hover:bg-emerald-500 transition-colors shrink-0" aria-hidden="true"></div>
                                 <div>
                                     <span class="text-neutral-200 group-hover:text-white transition-colors font-medium block">EF SET English Certificate 53/100 (B2 Upper Intermediate)</span>
-                                    <span class="text-neutral-500 text-xs">EF SET • Jan 2024</span>
+                                    <span class="text-neutral-500 text-xs">EF SET • <span data-i18n="date_jan2024">Jan 2024</span></span>
                                 </div>
                             </li>
                             <li class="flex items-start group">
                                 <div class="w-1.5 h-1.5 rounded-full bg-neutral-700 mt-2 mr-4 group-hover:bg-emerald-500 transition-colors shrink-0" aria-hidden="true"></div>
                                 <div>
                                     <span class="text-neutral-200 group-hover:text-white transition-colors font-medium block">Scrum Master Certified (SMC)</span>
-                                    <span class="text-neutral-500 text-xs">Udemy • May 2022</span>
+                                    <span class="text-neutral-500 text-xs">Udemy • <span data-i18n="date_may2022">May 2022</span></span>
                                 </div>
                             </li>
                             <li class="flex items-start group">
                                 <div class="w-1.5 h-1.5 rounded-full bg-neutral-700 mt-2 mr-4 group-hover:bg-emerald-500 transition-colors shrink-0" aria-hidden="true"></div>
                                 <div>
-                                    <span class="text-neutral-200 group-hover:text-white transition-colors font-medium block">Data Analysis Track & One Million Arab Codes</span>
+                                    <span class="text-neutral-200 group-hover:text-white transition-colors font-medium block" data-i18n="cert_data_analysis">Data Analysis Track & One Million Arab Codes</span>
                                     <span class="text-neutral-500 text-xs">Udacity</span>
                                 </div>
                             </li>
@@ -667,14 +652,14 @@
                             <li class="flex items-start group">
                                 <div class="w-1.5 h-1.5 rounded-full bg-neutral-700 mt-2 mr-4 group-hover:bg-emerald-500 transition-colors shrink-0" aria-hidden="true"></div>
                                 <div>
-                                    <span class="text-neutral-200 group-hover:text-white transition-colors font-medium block">Cyber Security & IT Management</span>
+                                    <span class="text-neutral-200 group-hover:text-white transition-colors font-medium block" data-i18n="cert_cyber">Cyber Security & IT Management</span>
                                     <span class="text-neutral-500 text-xs">Cisco</span>
                                 </div>
                             </li>
                             <li class="flex items-start group">
                                 <div class="w-1.5 h-1.5 rounded-full bg-neutral-700 mt-2 mr-4 group-hover:bg-emerald-500 transition-colors shrink-0" aria-hidden="true"></div>
                                 <div>
-                                    <span class="text-neutral-200 group-hover:text-white transition-colors font-medium block">The Fundamentals of Digital Marketing</span>
+                                    <span class="text-neutral-200 group-hover:text-white transition-colors font-medium block" data-i18n="cert_digital">The Fundamentals of Digital Marketing</span>
                                     <span class="text-neutral-500 text-xs">Google</span>
                                 </div>
                             </li>
@@ -690,12 +675,15 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                 <div>
-                    <h2 class="text-4xl font-bold text-white mb-6">Let's build something <br/><span class="text-neutral-500">extraordinary.</span></h2>
-                    <p class="text-neutral-400 max-w-sm mb-8">
+                    <h2 class="text-4xl font-bold text-white mb-6">
+                        <span data-i18n="foot_title_1">Let's build something</span> <br/>
+                        <span class="text-neutral-500" data-i18n="foot_title_2">extraordinary.</span>
+                    </h2>
+                    <p class="text-neutral-400 max-w-sm mb-8" data-i18n="foot_desc">
                         Currently open for senior engineering roles, freelance opportunities, and technical leadership.
                     </p>
                     <a href="mailto:youness@zbair.net" class="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 text-black rounded-lg font-bold hover:bg-emerald-400 transition-colors" aria-label="Send email to youness@zbair.net">
-                        <i data-lucide="mail" class="w-[18px] h-[18px]" aria-hidden="true"></i> Say Hello
+                        <i data-lucide="mail" class="w-[18px] h-[18px]" aria-hidden="true"></i> <span data-i18n="foot_btn">Say Hello</span>
                     </a>
                 </div>
 
@@ -714,7 +702,7 @@
             </div>
 
             <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-neutral-900 text-sm text-neutral-500">
-                <p>&copy; <span id="year"></span> ZBAIR YOUNESS. Built with HTML & Tailwind.</p>
+                <p>&copy; <span id="year"></span> ZBAIR YOUNESS. <span data-i18n="foot_built">Built with HTML & Tailwind.</span></p>
                 <div class="flex items-center gap-6 mt-4 md:mt-0">
                     <a href="https://github.com/youness52" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="GitHub Profile">GitHub</a>
                     <a href="https://zbair.net" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Portfolio Website">Portfolio</a>
@@ -725,13 +713,217 @@
 
     <!-- Scripts -->
     <script>
+        // Translations Dictionary
+        const translations = {
+            en: {
+                nav_about: "About",
+                nav_expertise: "Expertise",
+                nav_projects: "Projects",
+                nav_experience: "Experience",
+                nav_contact: "Get in touch",
+
+                hero_available: "Available for Senior Roles",
+                hero_title_1: "Architecting",
+                hero_title_2: "scalable systems.",
+                hero_desc: "Passionate Full Stack Engineer with deep expertise in the Laravel ecosystem, mobile development (React Native), and robust API architectures. Proven track record in designing, scaling, and optimizing complete web and mobile solutions.",
+                hero_btn_projects: "Projects",
+                hero_location: "Ksar el Kebir, Morocco",
+                hero_role: "Senior Full Stack Engineer",
+                hero_badge: "Clean Code",
+
+                exp_title: "Technical Arsenal",
+                exp_desc: "Comprehensive expertise across the entire stack, specializing in building resilient applications from robust databases to scalable cross-platform mobile interfaces.",
+                exp_core: "Core Ecosystem",
+                exp_front: "Frontend",
+                exp_mobile: "Mobile",
+                exp_back: "Backend & Database",
+
+                proj_title: "Featured Projects",
+                proj_desc: "A curated selection of modern applications, custom architectures, and mobile solutions I have engineered recently.",
+                tag_mobile: "Mobile App",
+                tag_live_mobile: "Live Mobile App",
+                tag_ent_web: "Enterprise Web App",
+                tag_desktop_mob: "Desktop / Mobile",
+                
+                proj_fit_desc: "A comprehensive fitness application designed to be your ultimate workout companion. Features include customized workout creation (sets, reps, duration), discovering new pre-built routines, and maintaining a detailed history of your progress with an interactive workout player.",
+                proj_cal_title: "Calories Tracker",
+                proj_cal_desc: "Built with React Native to make nutrition tracking simple and intuitive. Features a clean interface for daily calorie and macro monitoring, a comprehensive food database, custom recipe entries, and weekly progress overviews.",
+                btn_playstore: "View on Play Store",
+                proj_meet_title: "Meeting Room Reservation",
+                proj_meet_desc: "A robust web-based system designed for managing corporate meeting spaces. Includes dynamic forms for booking, detailed analytics dashboards, and complex user role and permission management.",
+                proj_pos_title: "Point of Sale (POS)",
+                proj_pos_desc: "A complete Point of Sale mobile and desktop solution. Architected to handle real-time mobile order entry, main register operations, and robust operational settings directly connected to the central database.",
+                proj_calm_desc: "An ambient sound mixer designed for focus and relaxation. Users can seamlessly blend multiple audio tracks, such as lofi beats, ocean waves, and nature sounds, adjusting individual volume levels to create their perfect environment.",
+                proj_sleep_title: "Sleep Tracker & Water Reminder",
+                proj_sleep_desc: "A suite of health utility applications built to monitor daily wellness metrics. Includes accurate sleep cycle monitoring with bedtime reminders, alongside daily hydration tracking algorithms.",
+
+                work_title: "Professional Experience",
+                work_desc: "A timeline of professional roles, highlighting development, leadership, and teaching contributions.",
+                job1_title: "IT Teacher",
+                job1_date: "Feb 2020 - Present",
+                job1_task1: "Delivered comprehensive curriculum on advanced IT concepts and modern programming technologies.",
+                job1_task2: "Mentored students through complex projects, focusing on best practices and clean code logic.",
+                job2_title: "Full Stack Developer",
+                job2_company: "Dahbi Group (Remote)",
+                job2_date: "Jul 2024 - Jun 2025",
+                job2_task1: "Freelance Full Stack engineer architecting and delivering complete web solutions remotely.",
+                job2_task2: "Optimized database structures and scaled API endpoints for rapid data retrieval.",
+                job3_title: "Full-stack Developer",
+                job3_date: "Jul 2022 - Sep 2022",
+                job3_task1: "Engineered scalable backend architectures primarily utilizing Laravel and JavaScript.",
+                job3_task2: "Collaborated with multidisciplinary industrial teams to accelerate technical delivery.",
+                job4_title: "IT & Team Leader",
+                job4_date: "Oct 2019 - Oct 2021",
+                job4_task1: "Configured and actively maintained secure, high-volume mail servers.",
+                job4_task2: "Led the development team in creating enterprise email marketing applications, focusing on REST APIs and Cyber-security.",
+                job5_title: "Freelance Developer",
+                job5_date: "Aug 2015 - Jul 2018",
+                job5_task1: "Delivered custom web solutions for international clients using Laravel and WordPress.",
+
+                edu_title: "Academic Background",
+                edu1_date: "Nov 2023 - Aug 2025",
+                edu1_degree: "Master's degree, Computer Engineering, Security and Decision",
+                edu1_skills: "Skills: Java, PHP, Artificial Intelligence, Big Data",
+                edu2_date: "Sep 2021 - Oct 2022",
+                edu2_degree: "Bachelor's degree, Web/Multimedia Management & Webmaster",
+                edu2_school: "Federation for European Education",
+                edu2_skills: "Skills: PHP, Laravel, Modern JS Frameworks",
+
+                cert_title: "Licenses & Certifications",
+                date_jan2024: "Jan 2024",
+                date_may2022: "May 2022",
+                cert_data_analysis: "Data Analysis Track & One Million Arab Codes",
+                cert_cyber: "Cyber Security & IT Management",
+                cert_digital: "The Fundamentals of Digital Marketing",
+
+                foot_title_1: "Let's build something",
+                foot_title_2: "extraordinary.",
+                foot_desc: "Currently open for senior engineering roles, freelance opportunities, and technical leadership.",
+                foot_btn: "Say Hello",
+                foot_built: "Built with HTML & Tailwind."
+            },
+            fr: {
+                nav_about: "À propos",
+                nav_expertise: "Compétences",
+                nav_projects: "Projets",
+                nav_experience: "Expérience",
+                nav_contact: "Me contacter",
+
+                hero_available: "Disponible pour des postes seniors",
+                hero_title_1: "Conception de",
+                hero_title_2: "systèmes évolutifs.",
+                hero_desc: "Ingénieur Full Stack passionné avec une forte expertise dans l'écosystème Laravel, le développement mobile (React Native) et les architectures API robustes. Expérience confirmée dans la conception, la mise à l'échelle et l'optimisation de solutions web et mobiles complètes.",
+                hero_btn_projects: "Projets",
+                hero_location: "Ksar El Kébir, Maroc",
+                hero_role: "Ingénieur Full Stack Senior",
+                hero_badge: "Code Propre",
+
+                exp_title: "Arsenal Technique",
+                exp_desc: "Expertise complète couvrant l'ensemble de la pile technique, spécialisée dans la création d'applications résilientes, des bases de données robustes aux interfaces mobiles multiplateformes.",
+                exp_core: "Écosystème Principal",
+                exp_front: "Front-end",
+                exp_mobile: "Mobile",
+                exp_back: "Back-end & Base de données",
+
+                proj_title: "Projets Récents",
+                proj_desc: "Une sélection d'applications modernes, d'architectures sur mesure et de solutions mobiles que j'ai récemment conçues.",
+                tag_mobile: "App Mobile",
+                tag_live_mobile: "App Mobile en Ligne",
+                tag_ent_web: "App Web d'Entreprise",
+                tag_desktop_mob: "Bureau / Mobile",
+
+                proj_fit_desc: "Une application de fitness complète conçue pour être votre compagnon d'entraînement ultime. Les fonctionnalités incluent la création d'entraînements personnalisés (séries, répétitions, durée), la découverte de nouvelles routines et le maintien d'un historique détaillé avec un lecteur interactif.",
+                proj_cal_title: "Suivi des Calories",
+                proj_cal_desc: "Créée avec React Native pour rendre le suivi de la nutrition simple et intuitif. Interface épurée pour le suivi quotidien, base de données alimentaire complète, recettes personnalisées et aperçus hebdomadaires des progrès.",
+                btn_playstore: "Voir sur le Play Store",
+                proj_meet_title: "Réservation de Salles",
+                proj_meet_desc: "Un système web robuste conçu pour la gestion des espaces de réunion en entreprise. Comprend des formulaires de réservation dynamiques, des tableaux de bord analytiques et une gestion complexe des rôles.",
+                proj_pos_title: "Point de Vente (POS)",
+                proj_pos_desc: "Solution complète de point de vente mobile et de bureau. Architecturée pour gérer les commandes en temps réel, les opérations de caisse principales et les paramètres opérationnels directement connectés à la base de données.",
+                proj_calm_desc: "Un mixeur de sons d'ambiance conçu pour la concentration et la relaxation. Les utilisateurs peuvent mélanger en toute fluidité plusieurs pistes audio pour créer leur environnement parfait.",
+                proj_sleep_title: "Suivi du Sommeil & Rappel d'Eau",
+                proj_sleep_desc: "Une suite d'applications utilitaires de santé conçues pour surveiller les métriques de bien-être quotidiennes. Inclut une surveillance précise des cycles de sommeil avec des rappels, ainsi que des algorithmes de suivi de l'hydratation.",
+
+                work_title: "Expérience Professionnelle",
+                work_desc: "Un aperçu des rôles professionnels, soulignant les contributions au développement, au leadership et à l'enseignement.",
+                job1_title: "Professeur d'Informatique",
+                job1_date: "Fév 2020 - Présent",
+                job1_task1: "Enseignement d'un programme complet sur les concepts informatiques avancés et les technologies de programmation modernes.",
+                job1_task2: "Mentorat d'étudiants à travers des projets complexes, en se concentrant sur les meilleures pratiques et la logique du code propre.",
+                job2_title: "Développeur Full Stack",
+                job2_company: "Dahbi Group (À distance)",
+                job2_date: "Juil 2024 - Juin 2025",
+                job2_task1: "Ingénieur Full Stack freelance concevant et livrant des solutions web complètes à distance.",
+                job2_task2: "Optimisation des structures de base de données et mise à l'échelle des points de terminaison API.",
+                job3_title: "Développeur Full Stack",
+                job3_date: "Juil 2022 - Sep 2022",
+                job3_task1: "Conception d'architectures backend évolutives en utilisant principalement Laravel et JavaScript.",
+                job3_task2: "Collaboration avec des équipes industrielles multidisciplinaires pour accélérer la livraison technique.",
+                job4_title: "Responsable Informatique",
+                job4_date: "Oct 2019 - Oct 2021",
+                job4_task1: "Configuration et maintenance active de serveurs de messagerie sécurisés à haut volume.",
+                job4_task2: "Direction de l'équipe de développement dans la création d'applications d'emailing d'entreprise, axées sur les API REST et la cybersécurité.",
+                job5_title: "Développeur Freelance",
+                job5_date: "Août 2015 - Juil 2018",
+                job5_task1: "Livraison de solutions web personnalisées pour des clients internationaux utilisant Laravel et WordPress.",
+
+                edu_title: "Parcours Académique",
+                edu1_date: "Nov 2023 - Août 2025",
+                edu1_degree: "Master, Ingénierie Informatique, Sécurité et Décision",
+                edu1_skills: "Compétences : Java, PHP, Intelligence Artificielle, Big Data",
+                edu2_date: "Sep 2021 - Oct 2022",
+                edu2_degree: "Bachelor, Management Web/Multimédia & Webmaster",
+                edu2_school: "Fédération Européenne des Écoles",
+                edu2_skills: "Compétences : PHP, Laravel, Frameworks JS Modernes",
+
+                cert_title: "Licences & Certifications",
+                date_jan2024: "Janv 2024",
+                date_may2022: "Mai 2022",
+                cert_data_analysis: "Parcours Analyse de Données & Un Million de Codeurs Arabes",
+                cert_cyber: "Cybersécurité & Gestion Informatique",
+                cert_digital: "Les Fondamentaux du Marketing Digital",
+
+                foot_title_1: "Construisons quelque chose",
+                foot_title_2: "d'extraordinaire.",
+                foot_desc: "Actuellement disponible pour des rôles d'ingénierie seniors, des opportunités freelance et du leadership technique.",
+                foot_btn: "Me Contacter",
+                foot_built: "Créé avec HTML & Tailwind."
+            }
+        };
+
+        // Language Setter Function
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang; // Accessibility
+
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update active state of language toggle buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('lang-active');
+            });
+            const activeBtn = document.querySelector(`.lang-btn[data-lang="${lang}"]`);
+            if(activeBtn) activeBtn.classList.add('lang-active');
+        }
+
         // Initialize Lucide Icons after DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
+            
             // Set Current Year in Footer
             document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Load saved language or default to English
+            const savedLang = localStorage.getItem('lang') || 'en';
+            setLanguage(savedLang);
         });
 
         // Navbar Scroll Effect
@@ -754,6 +946,3 @@
     </script>
 </body>
 </html>
-
-
-
